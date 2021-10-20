@@ -6,7 +6,9 @@ using namespace std;
 #define ll long long
 
 
-int main() {
+int main()
+{
+    faster();
     int t;
     cin >> t;
     ll ans[33][33], res = 0;
@@ -20,9 +22,11 @@ int main() {
             if(i && j) ans[i][j] = ans[i - 1][j + 1] + ans[i][j - 1];
         }
     }
-    while(t--) {
+    while(t--)
+    {
         int n;
         cin >> n;
         cout << ans[n][0] << endl;
     }
+    return 0;
 }
